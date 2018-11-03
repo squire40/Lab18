@@ -11,7 +11,7 @@
             l.Add("Coco");
             l.Add("Sylvia");
 
-            var result = l.RemoveAt(5);
+            l.PrintReverse();
 
             l = null;
         }

@@ -96,6 +96,15 @@ namespace Lab18
 
             return true;
         }
+        public void PrintReverse()
+        {
+            var index = Count - 1;
+
+            for (int i = Count -1; i >= 0; i--)
+            {
+                Console.WriteLine(GetNode(i).Data);
+            }
+        }
 
         private void DestroyNode(Node node)
         {
