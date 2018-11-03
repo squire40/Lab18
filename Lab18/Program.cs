@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab18
+﻿namespace Lab18
 {
     class Program
     {
         static void Main(string[] args)
         {
+            LinkedList l = new LinkedList();
+
+            l.Add("Dave");
+            l.Add("Shark");
+            l.Add("Coco");
+            l.Add("Sylvia");
+
+            var result = l.RemoveAt(5);
+
+            l = null;
         }
     }
 }

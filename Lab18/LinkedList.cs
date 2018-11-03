@@ -45,11 +45,11 @@ namespace Lab18
         {
             try
             {
-                if (Head == null)
+                var node = GetNode(index);
+                if (node == null)
                 {
                     return false;
                 }
-                var node = GetNode(index);
                 if (node == Head)
                 {
                     Head = node.Next;
@@ -62,6 +62,19 @@ namespace Lab18
 
                 SetHeadAndTail();
                 DestroyNode(node);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        public bool InsertAt(int index, Node node)
+        {
+            try
+            {
+
             }
             catch (IndexOutOfRangeException)
             {
@@ -79,13 +92,14 @@ namespace Lab18
 
         private void SetHeadAndTail()
         {
-            int index = 0;
-            Head = GetNode(index);
+            Count = 1;
+            Head = GetNode(0);
             Node node = Head.Next;
 
             do
             {
                 node = node.Next;
+                Count++;
             } while (node.Next != null);
 
             Tail = node;
