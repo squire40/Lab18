@@ -21,6 +21,10 @@
 
             f.DisplayFrequency();
 
+            f.FindFrequencyWithArray();
+
+            f.DisplayFrequency();
+
             l = null;
         }
     }

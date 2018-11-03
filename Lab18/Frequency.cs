@@ -12,6 +12,8 @@ namespace Lab18
 
         public int[] Array { get; set; }
 
+        public int[] FrequencyArray { get; set; }
+
         public Frequency(int[] array)
         {
             Array = array;
@@ -33,11 +35,23 @@ namespace Lab18
             }
         }
 
+        public void FindFrequencyWithArray()
+        {
+            FrequencyArray = new int[Array.Max() + 1];
+            foreach (var item in Array)
+            {
+                FrequencyArray[item]++;
+            }
+        }
+
         public void DisplayFrequency()
         {
             foreach (var item in Items.OrderBy(x => x.Key))
             {
-                Console.WriteLine($"{item.Key}: {item.Value}");
+                if (item.Key > 0)
+                {
+                    Console.WriteLine($"{item.Key}: {item.Value}");
+                }
             }
         }
     }
