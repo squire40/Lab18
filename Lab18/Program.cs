@@ -11,7 +11,15 @@
             l.Add("Coco");
             l.Add("Sylvia");
 
-            l.PrintReverse();
+            //l.PrintReverse();
+
+            var ints = new[] { 1, 2, 3, 2, 2, 4, 5, 5, 7, 8, 4, 4, 1, 0, 10};
+
+            var f = new Frequency(ints);
+
+            f.FindFrequency();
+
+            f.DisplayFrequency();
 
             l = null;
         }
