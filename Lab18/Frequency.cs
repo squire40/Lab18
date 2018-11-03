@@ -53,6 +53,8 @@ namespace Lab18
                     Console.WriteLine($"{item.Key}: {item.Value}");
                 }
             }
+
+            Console.WriteLine();
         }
     }
 }

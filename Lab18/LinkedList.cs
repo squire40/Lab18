@@ -40,6 +40,8 @@ namespace Lab18
             {
                 Console.WriteLine(GetNode(i).Data);
             }
+
+            Console.WriteLine();
         }
         public bool RemoveAt(int index)
         {
@@ -104,6 +106,8 @@ namespace Lab18
             {
                 Console.WriteLine(GetNode(i).Data);
             }
+
+            Console.WriteLine();
         }
 
         private void DestroyNode(Node node)

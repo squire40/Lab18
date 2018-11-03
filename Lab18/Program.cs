@@ -1,4 +1,6 @@
-﻿namespace Lab18
+﻿using System;
+
+namespace Lab18
 {
     class Program
     {
@@ -10,8 +12,11 @@
             l.Add("Shark");
             l.Add("Coco");
             l.Add("Sylvia");
+            l.Add("Mama");
 
-            //l.PrintReverse();
+            l.PrintList();
+
+            l.PrintReverse();
 
             var ints = new[] { 1, 2, 3, 2, 2, 4, 5, 5, 7, 8, 4, 4, 1, 0, 10};
 
@@ -25,7 +30,9 @@
 
             f.DisplayFrequency();
 
-            l = null;
+            Console.WriteLine("Big O is O(N)");
+
+            Console.ReadKey();
         }
     }
 }
