@@ -41,6 +41,8 @@ namespace Lab18
                 Console.WriteLine(GetNode(i).Data);
             }
 
+            Console.WriteLine($"Head: {Head.Data}");
+            Console.WriteLine($"Tail: {Tail.Data}");
             Console.WriteLine();
         }
         public bool RemoveAt(int index)
@@ -56,13 +58,19 @@ namespace Lab18
                 {
                     Head = node.Next;
                 }
+                else if (node == Tail)
+                {
+                    var previousNode = GetNode(index - 1);
+                    previousNode.Next = null;
+                    Tail = previousNode;
+                }
                 else
                 {
                     var previousNode = GetNode(index - 1);
                     previousNode.Next = node.Next;
                 }
 
-                SetHeadAndTail();
+                Count--;
                 DestroyNode(node);
             }
             catch (Exception)
@@ -82,6 +90,17 @@ namespace Lab18
                     node.Next = tempNode;
                     Head = node;
                 }
+                else if (tempNode == Tail)
+                {
+                    var previousNode = GetNode(index - 1);
+                    previousNode.Next = node;
+                    Tail = node;
+                }
+                else if (tempNode == null)
+                {
+                    Tail.Next = node;
+                    Tail = node;
+                }
                 else
                 {
                     var previousNode = GetNode(index - 1);
@@ -89,7 +108,7 @@ namespace Lab18
                     previousNode.Next = node;
                 }
 
-                SetHeadAndTail();
+                Count++;
             }
             catch (Exception)
             {
@@ -106,6 +125,9 @@ namespace Lab18
             {
                 Console.WriteLine(GetNode(i).Data);
             }
+
+            Console.WriteLine($"Head: {Head.Data}");
+            Console.WriteLine($"Tail: {Tail.Data}");
 
             Console.WriteLine();
         }

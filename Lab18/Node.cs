@@ -1,5 +1,8 @@
-﻿namespace Lab18
+﻿using System.Diagnostics;
+
+namespace Lab18
 {
+    [DebuggerDisplay("{Data}")]
     public class Node
     {
         public string Data { get; set; }
