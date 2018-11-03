@@ -74,9 +74,22 @@ namespace Lab18
         {
             try
             {
+                var tempNode = GetNode(index);
+                if (tempNode == Head)
+                {
+                    node.Next = tempNode;
+                    Head = node;
+                }
+                else
+                {
+                    var previousNode = GetNode(index - 1);
+                    node.Next = previousNode.Next;
+                    previousNode.Next = node;
+                }
 
+                SetHeadAndTail();
             }
-            catch (IndexOutOfRangeException)
+            catch (Exception)
             {
                 return false;
             }
