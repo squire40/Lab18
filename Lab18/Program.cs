@@ -20,14 +20,14 @@ namespace Lab18
 
             Console.ReadKey();
 
-            l.InsertAt(5, new Node("Grandpa", null));
+            l.InsertAt(2, new Node("Grandpa", null));
 
             l.PrintList();
             //l.PrintReverse();
 
             Console.ReadKey();
 
-            l.RemoveAt(5);
+            l.RemoveAt(2);
 
             l.PrintList();
             //l.PrintReverse();
@@ -42,9 +42,11 @@ namespace Lab18
 
             f.DisplayFrequency();
 
+            Console.ReadKey();
+
             f.FindFrequencyWithArray();
 
-            f.DisplayFrequency();
+            f.DisplayFrequencyArray();
 
             Console.WriteLine("Big O is O(N)");
 

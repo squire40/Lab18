@@ -48,9 +48,19 @@ namespace Lab18
         {
             foreach (var item in Items.OrderBy(x => x.Key))
             {
-                if (item.Key > 0)
+                Console.WriteLine($"{item.Key}: {item.Value}");
+            }
+
+            Console.WriteLine();
+        }
+
+        public void DisplayFrequencyArray()
+        {
+            for (int i = 0; i < FrequencyArray.Length; i++)
+            {
+                if (FrequencyArray[i] > 0)
                 {
-                    Console.WriteLine($"{item.Key}: {item.Value}");
+                    Console.WriteLine($"{i}: {FrequencyArray[i]}");
                 }
             }
 
